@@ -67,7 +67,7 @@
    "fieldname": "assigned_to",
    "fieldtype": "Select",
    "label": "Assigned To",
-   "options": "\nBased On territory\nBased On industry\nBased On Rule"
+   "options": "\nBased On Territory\nBased On Industry\nBased On Rule"
   },
   {
    "depends_on": "eval:doc.assigned_to == \"Based On Rule\"\n",
@@ -85,7 +85,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-17 07:47:02.748406",
+ "modified": "2025-06-10 13:08:56.608570",
  "modified_by": "Administrator",
  "module": "CRM Task Automation",
  "name": "Lead Task Config",

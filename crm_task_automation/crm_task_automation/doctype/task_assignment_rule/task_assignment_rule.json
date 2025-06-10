@@ -24,8 +24,7 @@
    "fieldname": "condition",
    "fieldtype": "JSON",
    "in_list_view": 1,
-   "label": "Condition",
-   "reqd": 1
+   "label": "Condition"
   },
   {
    "fieldname": "last_user",
@@ -58,7 +57,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-17 10:14:17.157558",
+ "modified": "2025-06-10 13:38:10.062501",
  "modified_by": "Administrator",
  "module": "CRM Task Automation",
  "name": "Task Assignment Rule",

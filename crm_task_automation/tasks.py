@@ -76,14 +76,14 @@ def get_user(assignment_rule_doc, lead_doc):
 
 def get_assigned_user(lead_doc, assigned_to, assignment_rule):
     # Check for Territory Manager
-    if assigned_to == 'Based On territory':
+    if assigned_to == 'Based On Territory':
         if lead_doc.territory:
             territory_manager = frappe.db.get_value("CRM Territory", lead_doc.territory, "territory_manager")
             if territory_manager:
                 return territory_manager
 
     # Check for Industry Responsable
-    if assigned_to == 'Based On industry':
+    if assigned_to == 'Based On Industry':
         if lead_doc.industry:
             industry_responsable = frappe.db.get_value("CRM Industry", lead_doc.industry, "custom_responsable")
             if industry_responsable:
