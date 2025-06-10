@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{rule_name}-{####}",
+ "creation": "2025-03-12 07:16:35.101725",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "rule_name",
+  "disabled",
+  "condition",
+  "rule",
+  "users",
+  "last_user"
+ ],
+ "fields": [
+  {
+   "fieldname": "rule_name",
+   "fieldtype": "Data",
+   "label": "Rule Name"
+  },
+  {
+   "description": "A simple JSON object with a key-value pair, e.g., {\"status\": \"Open\"}",
+   "fieldname": "condition",
+   "fieldtype": "JSON",
+   "in_list_view": 1,
+   "label": "Condition",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_user",
+   "fieldtype": "Link",
+   "label": "Last User",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rule",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Rule",
+   "options": "Round Robin\nLoad Balancing",
+   "reqd": 1
+  },
+  {
+   "fieldname": "users",
+   "fieldtype": "Table MultiSelect",
+   "label": "Users",
+   "options": "Assignment Rule User",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-17 10:14:17.157558",
+ "modified_by": "Administrator",
+ "module": "CRM Task Automation",
+ "name": "Task Assignment Rule",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

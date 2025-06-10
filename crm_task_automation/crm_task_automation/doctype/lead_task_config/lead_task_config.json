@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2025-03-10 07:38:54.534773",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "lead_status",
+  "task_title",
+  "assigned_to",
+  "assignment_rule",
+  "column_break_tnsl",
+  "priority",
+  "status",
+  "due_in",
+  "active",
+  "section_break_aakv",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_title",
+   "fieldtype": "Data",
+   "label": "Task Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh"
+  },
+  {
+   "fieldname": "due_in",
+   "fieldtype": "Int",
+   "label": "Due In"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_tnsl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_aakv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lead_status",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lead Status",
+   "options": "CRM Lead Status",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Backlog\nTodo\nIn Progress\nDone\nCanceled"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Select",
+   "label": "Assigned To",
+   "options": "\nBased On territory\nBased On industry\nBased On Rule"
+  },
+  {
+   "depends_on": "eval:doc.assigned_to == \"Based On Rule\"\n",
+   "fieldname": "assignment_rule",
+   "fieldtype": "Link",
+   "label": "Assignment Rule",
+   "options": "Task Assignment Rule"
+  },
+  {
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-17 07:47:02.748406",
+ "modified_by": "Administrator",
+ "module": "CRM Task Automation",
+ "name": "Lead Task Config",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
